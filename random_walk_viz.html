@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+<style>
+
+
+.link {
+  fill: none;
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+.centered {
+  text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    font-size: 13px;
+    width:  auto;
+    height: auto;
+    pointer-events: none;
+    background-color: white;
+}
+
+svg {
+  display:block;
+  margin:auto;
+}
+
+</style>
+
+<html>
+  <body>
+    <div class = "card centered" width = "800" height = "900">
+    <h1>CDS Wiki-Insights RandomWalk Viz</h1>
+    <div>
+    <select id="dropdown">
+      <option value="Linear_algebra">Linear Algebra</option>
+      <option value="Hevea_brasiliensis">Hevea Brasiliensis</option>
+    </select>
+    <button type="button" class="sel_graph_button">Select Graph
+  </div>
+
+    <form action="/action_page.php" method="get">
+    <input type="checkbox" id="text_visible" value="text"checked> Display Names of Nodes
+
+  <div id = "checkboxes">
+    <input type="checkbox" class="pCheckbox" id="path1" value="0"checked> Path 1
+    <input type="checkbox" class="pCheckbox" id="path2" value="1"checked> Path 2
+    <input type="checkbox" class="pCheckbox" id="path3" value="2"checked> Path 3
+    <input type="checkbox" class="pCheckbox" id="path4" value="3"checked> Path 4
+    <input type="checkbox" class="pCheckbox" id="path5" value="4"checked> Path 5
+    <input type="checkbox" class="pCheckbox" id="path6" value="5"checked> Path 6
+    <input type="checkbox" class="pCheckbox" id="path7" value="6"checked> Path 7
+    <input type="checkbox" class="pCheckbox" id="path8" value="7"checked> Path 8
+    <input type="checkbox" class="pCheckbox" id="path9" value="8"checked> Path 9
+    <input type="checkbox" class="pCheckbox" id="path10" value="9"checked> Path 10
+  </div>
+  <div>
+    <input type="checkbox" class="pCheckbox" id="path11" value="10"checked> Path 11
+    <input type="checkbox" class="pCheckbox" id="path12" value="11"checked> Path 12
+    <input type="checkbox" class="pCheckbox" id="path13" value="12"checked> Path 13
+    <input type="checkbox" class="pCheckbox" id="path14" value="13"checked> Path 14
+    <input type="checkbox" class="pCheckbox" id="path15" value="14"checked> Path 15
+    <input type="checkbox" class="pCheckbox" id="path16" value="15"checked> Path 16
+    <input type="checkbox" class="pCheckbox" id="path17" value="16"checked> Path 17
+    <input type="checkbox" class="pCheckbox" id="path18" value="17"checked> Path 18
+    <input type="checkbox" class="pCheckbox" id="path19" value="18"checked> Path 19
+    <input type="checkbox" class="pCheckbox" id="path20" value="19"checked> Path 20
+  </div>
+</form>
+
+  <div>
+    <button type="button" class="selAllCheckbox"> Select All Paths
+    <button type="button" class="selNoneCheckbox"> Deselct All Paths
+  </div>
+
+
+    <svg width="760" height="760"></svg>
+  </div>
+    <div id="vis-container"></div>
+  </body>
+
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="random_walk_viz.js"></script>
+</html>
